@@ -1,38 +1,98 @@
-.App {
+/* Conteneur principal */
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Barre latérale */
+.sidebar {
+  width: 250px;
+  background-color: #005eff;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h4 {
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-card:hover {
+  background-color: #0040cc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.active-user {
+  background-color: #003399;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Zone de chat */
+.chat-display {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f9fafc;
+  border-left: 1px solid #ddd;
+}
+
+.channel-header-container {
+  background-color: #005eff;
+  padding: 10px 20px;
   color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome-container {
+  padding: 15px 20px;
+  background-color: #f1f7ff;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-message {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0;
+}
+
+.welcome-message strong {
+  color: #005eff;
+}
+
+.welcome-message em {
+  font-style: italic;
+  color: #ff7b00;
+}
+
+.message-list-container {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message-input-container {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
 }

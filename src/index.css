@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Style pour l'input de message */
+.stream-chat__message-input {
+  background-color: #f7f7f7; /* Fond clair */
+  border: 2px solid #ccc; /* Bordure grise claire */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 10px 15px; /* Espacement interne */
+  width: 100%; /* Remplir toute la largeur du conteneur */
+  font-size: 16px; /* Taille de la police */
+  color: #333; /* Couleur du texte */
+  box-sizing: border-box; /* Inclut les bordures dans la taille totale */
+  transition: all 0.3s ease; /* Animation pour les changements */
+}
+
+/* Style quand l'input est sélectionné (focus) */
+.stream-chat__message-input:focus {
+  border-color: #4CAF50; /* Bordure verte */
+  outline: none; /* Supprimer l'effet de contour par défaut */
+  box-shadow: 0 0 5px rgba(0, 200, 0, 0.5); /* Ombre verte subtile */
+}
+
+/* Style de texte placeholder */
+.stream-chat__message-input::placeholder {
+  color: #888; /* Couleur du texte placeholder */
+  font-style: italic; /* Style de texte en italique */
+}
+
+/* Style lorsque l'input est désactivé */
+.stream-chat__message-input:disabled {
+  background-color: #e0e0e0; /* Fond gris clair */
+  border-color: #bbb; /* Bordure grise */
+  color: #aaa; /* Couleur du texte gris clair */
+}
